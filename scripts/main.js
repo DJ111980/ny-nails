@@ -79,7 +79,9 @@ function renderGalleries() {
     }
 
     images.forEach((imagePath) => {
-      gallery.appendChild(createGalleryCard(imagePath, gallery.getAttribute("aria-label") || "Imagen de galería"));
+      gallery.appendChild(
+        createGalleryCard(imagePath, gallery.getAttribute("aria-label") || "Imagen de galería")
+      );
     });
   });
 }

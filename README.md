@@ -6,13 +6,15 @@ Página web estática para un catálogo visual de manicura y pedicura. No usa ba
 
 - `index.html`: contenido y menús principales.
 - `styles/styles.css`: colores, diseño responsive y estilos visuales.
-- `scripts/main.js`: navegación simple entre pantallas.
+- `scripts/main.js`: navegación simple entre pantallas y visor de imágenes.
 - `scripts/generate-gallery-data.js`: genera automáticamente la lista de imágenes.
 - `scripts/gallery-data.js`: archivo generado con las imágenes encontradas.
 - `assets/images/manicuras/ideas-diseno/`: referencias para manicura.
 - `assets/images/manicuras/trabajos-realizados/`: fotos de trabajos de manicura.
-- `assets/images/pedicuras/ideas-diseno/`: referencias para pedicura.
-- `assets/images/pedicuras/trabajos-realizados/`: fotos de trabajos de pedicura.
+- `assets/images/pedicuras/semipermanentes/ideas-diseno/`: referencias para pedicura semipermanente.
+- `assets/images/pedicuras/semipermanentes/trabajos-realizados/`: fotos de trabajos de pedicura semipermanente.
+- `assets/images/pedicuras/tradicionales/ideas-diseno/`: referencias para pedicura tradicional.
+- `assets/images/pedicuras/tradicionales/trabajos-realizados/`: fotos de trabajos de pedicura tradicional.
 
 ## Cómo abrir el proyecto localmente
 
@@ -23,17 +25,6 @@ node scripts/generate-gallery-data.js
 ```
 
 Luego abre el archivo `index.html` en el navegador. También puedes usar la extensión Live Server de VS Code si prefieres revisar cambios con recarga automática.
-
-## Cómo subirlo a GitHub
-
-1. Crea un repositorio nuevo en GitHub.
-2. Sube estos archivos y carpetas al repositorio:
-   - `index.html`
-   - `README.md`
-   - `styles/`
-   - `scripts/`
-   - `assets/`
-3. Confirma que `index.html` quede en la raíz del repositorio.
 
 ## Cómo desplegar en Cloudflare Pages
 
@@ -63,8 +54,10 @@ Carpetas recomendadas:
 
 - Ideas de manicura: `assets/images/manicuras/ideas-diseno/`
 - Trabajos de manicura: `assets/images/manicuras/trabajos-realizados/`
-- Ideas de pedicura: `assets/images/pedicuras/ideas-diseno/`
-- Trabajos de pedicura: `assets/images/pedicuras/trabajos-realizados/`
+- Ideas de pedicura semipermanente: `assets/images/pedicuras/semipermanentes/ideas-diseno/`
+- Trabajos de pedicura semipermanente: `assets/images/pedicuras/semipermanentes/trabajos-realizados/`
+- Ideas de pedicura tradicional: `assets/images/pedicuras/tradicionales/ideas-diseno/`
+- Trabajos de pedicura tradicional: `assets/images/pedicuras/tradicionales/trabajos-realizados/`
 
 Formatos aceptados:
 
@@ -75,12 +68,6 @@ Formatos aceptados:
 - `.gif`
 
 Cuando Cloudflare Pages despliegue el sitio, ejecutará `node scripts/generate-gallery-data.js` y actualizará automáticamente la galería con las imágenes que encuentre en esas carpetas.
-
-Si quieres revisar los cambios localmente antes de subirlos, ejecuta:
-
-```bash
-node scripts/generate-gallery-data.js
-```
 
 Cada imagen se abre a pantalla completa al tocarla. Para salir de esa vista, usa el botón **Volver** de la página o el botón atrás del celular.
 
@@ -95,7 +82,3 @@ Los más importantes son:
 - `--color-primary-dark`: color principal oscuro.
 - `--color-accent`: detalle dorado suave.
 - `--color-text`: color del texto.
-
-## Nota sobre las imágenes actuales
-
-Las imágenes incluidas son recursos de muestra para que el sitio quede listo y se pueda revisar completo desde el primer despliegue. Para publicar el catálogo real, reemplázalas por fotos propias del negocio y por referencias autorizadas para uso web.

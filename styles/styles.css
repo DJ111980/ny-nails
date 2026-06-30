@@ -227,10 +227,10 @@ h2 {
   z-index: 10;
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 14px;
+  gap: 10px;
   width: 100%;
-  min-height: 100vh;
-  padding: 16px;
+  min-height: 100dvh;
+  padding: 12px;
   background: rgba(255, 248, 246, 0.98);
 }
 
@@ -244,7 +244,7 @@ h2 {
   justify-self: center;
   width: auto;
   max-width: 100%;
-  max-height: calc(100vh - 88px);
+  max-height: calc(100dvh - 70px);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-soft);
   object-fit: contain;
@@ -271,5 +271,13 @@ h2 {
 
   .menu-card {
     min-height: 132px;
+  }
+
+  .image-viewer {
+    padding: 10px;
+  }
+
+  .image-viewer__image {
+    max-height: calc(100dvh - 64px);
   }
 }

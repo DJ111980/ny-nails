@@ -4,8 +4,14 @@ const path = require("node:path");
 const galleries = {
   manicuraIdeas: "assets/images/manicuras/ideas-diseno",
   manicuraTrabajos: "assets/images/manicuras/trabajos-realizados",
-  pedicuraIdeas: "assets/images/pedicuras/ideas-diseno",
-  pedicuraTrabajos: "assets/images/pedicuras/trabajos-realizados",
+  pedicuraSemipermanenteIdeas:
+    "assets/images/pedicuras/semipermanentes/ideas-diseno",
+  pedicuraSemipermanenteTrabajos:
+    "assets/images/pedicuras/semipermanentes/trabajos-realizados",
+  pedicuraTradicionalIdeas:
+    "assets/images/pedicuras/tradicionales/ideas-diseno",
+  pedicuraTradicionalTrabajos:
+    "assets/images/pedicuras/tradicionales/trabajos-realizados",
 };
 
 const allowedExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
@@ -40,5 +46,3 @@ const galleryData = Object.fromEntries(
 const fileContent = `window.NYNailsGallery = ${JSON.stringify(galleryData, null, 2)};\n`;
 
 fs.writeFileSync(outputFile, fileContent, "utf8");
-
-console.log(`Galería actualizada en ${outputFile}`);

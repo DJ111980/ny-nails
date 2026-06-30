@@ -62,16 +62,60 @@
             Volver
           </button>
           <p class="eyebrow">Pedicura</p>
+          <h2>Elige el tipo de pedicura</h2>
+        </div>
+
+        <nav class="menu-grid" aria-label="Tipos de pedicura">
+          <button class="menu-card" type="button" data-target="pedicuraSemipermanente">
+            <span>Semipermanente</span>
+            <small>Diseños con acabado duradero y brillante.</small>
+          </button>
+
+          <button class="menu-card" type="button" data-target="pedicuraTradicional">
+            <span>Tradicional</span>
+            <small>Acabados clásicos, limpios y delicados.</small>
+          </button>
+        </nav>
+      </section>
+
+      <section class="content-view" data-view="pedicuraSemipermanente" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="pedicura">
+            Volver
+          </button>
+          <p class="eyebrow">Pedicura semipermanente</p>
           <h2>Elige una categoría</h2>
         </div>
 
-        <nav class="menu-grid" aria-label="Categorías de pedicura">
-          <button class="menu-card" type="button" data-target="pedicuraIdeas">
+        <nav class="menu-grid" aria-label="Categorías de pedicura semipermanente">
+          <button class="menu-card" type="button" data-target="pedicuraSemipermanenteIdeas">
             <span>Ideas de Diseño</span>
             <small>Referencias para elegir el próximo diseño.</small>
           </button>
 
-          <button class="menu-card" type="button" data-target="pedicuraTrabajos">
+          <button class="menu-card" type="button" data-target="pedicuraSemipermanenteTrabajos">
+            <span>Trabajos Realizados</span>
+            <small>Galería de servicios realizados.</small>
+          </button>
+        </nav>
+      </section>
+
+      <section class="content-view" data-view="pedicuraTradicional" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="pedicura">
+            Volver
+          </button>
+          <p class="eyebrow">Pedicura tradicional</p>
+          <h2>Elige una categoría</h2>
+        </div>
+
+        <nav class="menu-grid" aria-label="Categorías de pedicura tradicional">
+          <button class="menu-card" type="button" data-target="pedicuraTradicionalIdeas">
+            <span>Ideas de Diseño</span>
+            <small>Referencias para elegir el próximo diseño.</small>
+          </button>
+
+          <button class="menu-card" type="button" data-target="pedicuraTradicionalTrabajos">
             <span>Trabajos Realizados</span>
             <small>Galería de servicios realizados.</small>
           </button>
@@ -112,36 +156,70 @@
         </div>
       </section>
 
-      <section class="content-view" data-view="pedicuraIdeas" hidden>
+      <section class="content-view" data-view="pedicuraSemipermanenteIdeas" hidden>
         <div class="view-header">
-          <button class="back-button" type="button" data-target="pedicura">
+          <button class="back-button" type="button" data-target="pedicuraSemipermanente">
             Volver
           </button>
-          <p class="eyebrow">Pedicura</p>
+          <p class="eyebrow">Pedicura semipermanente</p>
           <h2>Ideas de Diseño</h2>
         </div>
 
         <div
           class="gallery-grid"
-          data-gallery="pedicuraIdeas"
-          data-empty-message="Agrega imágenes en assets/images/pedicuras/ideas-diseno/"
+          data-gallery="pedicuraSemipermanenteIdeas"
+          data-empty-message="Agrega imágenes en assets/images/pedicuras/semipermanentes/ideas-diseno/"
         >
         </div>
       </section>
 
-      <section class="content-view" data-view="pedicuraTrabajos" hidden>
+      <section class="content-view" data-view="pedicuraSemipermanenteTrabajos" hidden>
         <div class="view-header">
-          <button class="back-button" type="button" data-target="pedicura">
+          <button class="back-button" type="button" data-target="pedicuraSemipermanente">
             Volver
           </button>
-          <p class="eyebrow">Pedicura</p>
+          <p class="eyebrow">Pedicura semipermanente</p>
           <h2>Trabajos Realizados</h2>
         </div>
 
         <div
           class="gallery-grid"
-          data-gallery="pedicuraTrabajos"
-          data-empty-message="Agrega imágenes en assets/images/pedicuras/trabajos-realizados/"
+          data-gallery="pedicuraSemipermanenteTrabajos"
+          data-empty-message="Agrega imágenes en assets/images/pedicuras/semipermanentes/trabajos-realizados/"
+        >
+        </div>
+      </section>
+
+      <section class="content-view" data-view="pedicuraTradicionalIdeas" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="pedicuraTradicional">
+            Volver
+          </button>
+          <p class="eyebrow">Pedicura tradicional</p>
+          <h2>Ideas de Diseño</h2>
+        </div>
+
+        <div
+          class="gallery-grid"
+          data-gallery="pedicuraTradicionalIdeas"
+          data-empty-message="Agrega imágenes en assets/images/pedicuras/tradicionales/ideas-diseno/"
+        >
+        </div>
+      </section>
+
+      <section class="content-view" data-view="pedicuraTradicionalTrabajos" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="pedicuraTradicional">
+            Volver
+          </button>
+          <p class="eyebrow">Pedicura tradicional</p>
+          <h2>Trabajos Realizados</h2>
+        </div>
+
+        <div
+          class="gallery-grid"
+          data-gallery="pedicuraTradicionalTrabajos"
+          data-empty-message="Agrega imágenes en assets/images/pedicuras/tradicionales/trabajos-realizados/"
         >
         </div>
       </section>
