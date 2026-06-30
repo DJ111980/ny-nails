@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Catálogo visual de NY Nails con ideas de diseño y trabajos realizados de manicura y pedicura."
+    />
+    <title>NY Nails | Catálogo visual</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="hero" data-view="inicio">
+        <div class="hero__content">
+          <p class="eyebrow">Catálogo visual</p>
+          <h1>NY Nails</h1>
+          <p class="hero__subtitle">
+            Explora ideas de diseño y trabajos realizados.
+          </p>
+
+          <nav class="menu-grid" aria-label="Menú principal">
+            <button class="menu-card" type="button" data-target="manicura">
+              <span>Manicura</span>
+              <small>Diseños y acabados para manos.</small>
+            </button>
+
+            <button class="menu-card" type="button" data-target="pedicura">
+              <span>Pedicura</span>
+              <small>Diseños y acabados para pies.</small>
+            </button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="content-view" data-view="manicura" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="inicio">
+            Volver
+          </button>
+          <p class="eyebrow">Manicura</p>
+          <h2>Elige una categoría</h2>
+        </div>
+
+        <nav class="menu-grid" aria-label="Categorías de manicura">
+          <button class="menu-card" type="button" data-target="manicuraIdeas">
+            <span>Ideas de Diseño</span>
+            <small>Referencias para elegir el próximo diseño.</small>
+          </button>
+
+          <button class="menu-card" type="button" data-target="manicuraTrabajos">
+            <span>Trabajos Realizados</span>
+            <small>Galería de servicios realizados.</small>
+          </button>
+        </nav>
+      </section>
+
+      <section class="content-view" data-view="pedicura" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="inicio">
+            Volver
+          </button>
+          <p class="eyebrow">Pedicura</p>
+          <h2>Elige una categoría</h2>
+        </div>
+
+        <nav class="menu-grid" aria-label="Categorías de pedicura">
+          <button class="menu-card" type="button" data-target="pedicuraIdeas">
+            <span>Ideas de Diseño</span>
+            <small>Referencias para elegir el próximo diseño.</small>
+          </button>
+
+          <button class="menu-card" type="button" data-target="pedicuraTrabajos">
+            <span>Trabajos Realizados</span>
+            <small>Galería de servicios realizados.</small>
+          </button>
+        </nav>
+      </section>
+
+      <section class="content-view" data-view="manicuraIdeas" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="manicura">
+            Volver
+          </button>
+          <p class="eyebrow">Manicura</p>
+          <h2>Ideas de Diseño</h2>
+        </div>
+
+        <div
+          class="gallery-grid"
+          data-gallery="manicuraIdeas"
+          data-empty-message="Agrega imágenes en assets/images/manicuras/ideas-diseno/"
+        >
+        </div>
+      </section>
+
+      <section class="content-view" data-view="manicuraTrabajos" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="manicura">
+            Volver
+          </button>
+          <p class="eyebrow">Manicura</p>
+          <h2>Trabajos Realizados</h2>
+        </div>
+
+        <div
+          class="gallery-grid"
+          data-gallery="manicuraTrabajos"
+          data-empty-message="Agrega imágenes en assets/images/manicuras/trabajos-realizados/"
+        >
+        </div>
+      </section>
+
+      <section class="content-view" data-view="pedicuraIdeas" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="pedicura">
+            Volver
+          </button>
+          <p class="eyebrow">Pedicura</p>
+          <h2>Ideas de Diseño</h2>
+        </div>
+
+        <div
+          class="gallery-grid"
+          data-gallery="pedicuraIdeas"
+          data-empty-message="Agrega imágenes en assets/images/pedicuras/ideas-diseno/"
+        >
+        </div>
+      </section>
+
+      <section class="content-view" data-view="pedicuraTrabajos" hidden>
+        <div class="view-header">
+          <button class="back-button" type="button" data-target="pedicura">
+            Volver
+          </button>
+          <p class="eyebrow">Pedicura</p>
+          <h2>Trabajos Realizados</h2>
+        </div>
+
+        <div
+          class="gallery-grid"
+          data-gallery="pedicuraTrabajos"
+          data-empty-message="Agrega imágenes en assets/images/pedicuras/trabajos-realizados/"
+        >
+        </div>
+      </section>
+
+      <section class="image-viewer" data-view="visorImagen" hidden>
+        <button class="back-button image-viewer__back" type="button" data-close-viewer>
+          Volver
+        </button>
+        <img class="image-viewer__image" src="" alt="" />
+      </section>
+    </main>
+
+    <script src="scripts/gallery-data.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

@@ -7,6 +7,8 @@ Página web estática para un catálogo visual de manicura y pedicura. No usa ba
 - `index.html`: contenido y menús principales.
 - `styles/styles.css`: colores, diseño responsive y estilos visuales.
 - `scripts/main.js`: navegación simple entre pantallas.
+- `scripts/generate-gallery-data.js`: genera automáticamente la lista de imágenes.
+- `scripts/gallery-data.js`: archivo generado con las imágenes encontradas.
 - `assets/images/manicuras/ideas-diseno/`: referencias para manicura.
 - `assets/images/manicuras/trabajos-realizados/`: fotos de trabajos de manicura.
 - `assets/images/pedicuras/ideas-diseno/`: referencias para pedicura.
@@ -14,7 +16,13 @@ Página web estática para un catálogo visual de manicura y pedicura. No usa ba
 
 ## Cómo abrir el proyecto localmente
 
-Abre el archivo `index.html` en el navegador. También puedes usar la extensión Live Server de VS Code si prefieres revisar cambios con recarga automática.
+Después de agregar o quitar imágenes, ejecuta:
+
+```bash
+node scripts/generate-gallery-data.js
+```
+
+Luego abre el archivo `index.html` en el navegador. También puedes usar la extensión Live Server de VS Code si prefieres revisar cambios con recarga automática.
 
 ## Cómo subirlo a GitHub
 
@@ -35,7 +43,7 @@ Abre el archivo `index.html` en el navegador. También puedes usar la extensión
 4. Selecciona **Pages** y conecta tu repositorio de GitHub.
 5. En configuración del proyecto usa:
    - **Framework preset**: None / Ninguno
-   - **Build command**: dejar vacío
+   - **Build command**: `node scripts/generate-gallery-data.js`
    - **Build output directory**: `/`
 6. Guarda y despliega.
 
@@ -49,7 +57,7 @@ En `index.html`, edita los títulos, subtítulos y nombres de botones. Los texto
 
 ## Cómo cambiar fotos de cada galería
 
-Guarda las nuevas imágenes en la carpeta que corresponda y actualiza la ruta `src` de cada etiqueta `<img>` en `index.html`.
+Guarda las nuevas imágenes en la carpeta que corresponda. No tienes que editar el HTML para cada foto.
 
 Carpetas recomendadas:
 
@@ -58,16 +66,23 @@ Carpetas recomendadas:
 - Ideas de pedicura: `assets/images/pedicuras/ideas-diseno/`
 - Trabajos de pedicura: `assets/images/pedicuras/trabajos-realizados/`
 
-Ejemplo:
+Formatos aceptados:
 
-```html
-<img
-  src="assets/images/manicuras/ideas-diseno/nueva-foto.jpg"
-  alt="Idea de diseño para manicura"
-/>
+- `.jpg`
+- `.jpeg`
+- `.png`
+- `.webp`
+- `.gif`
+
+Cuando Cloudflare Pages despliegue el sitio, ejecutará `node scripts/generate-gallery-data.js` y actualizará automáticamente la galería con las imágenes que encuentre en esas carpetas.
+
+Si quieres revisar los cambios localmente antes de subirlos, ejecuta:
+
+```bash
+node scripts/generate-gallery-data.js
 ```
 
-Para agregar más imágenes, copia una tarjeta completa `<article class="gallery-card">...</article>` dentro de la galería correspondiente y cambia solo la ruta de la imagen. No es necesario poner título ni descripción por cada foto.
+Cada imagen se abre a pantalla completa al tocarla. Para salir de esa vista, usa el botón **Volver** de la página o el botón atrás del celular.
 
 ## Cómo cambiar colores principales
 
